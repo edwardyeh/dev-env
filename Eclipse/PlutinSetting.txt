@@ -1,0 +1,7 @@
+Eclipse CDT
+Eclipse EGit
+Subversive SVN
+SVN Connector (¤â°Ê¡Ahttp://community.polarion.com/projects/subversive/download/eclipse/6.0/update-site/)
+SWT Designer
+Sirius (Eclipse Marketsplace)
+UML Designer (Eclipse Marketsplace)
