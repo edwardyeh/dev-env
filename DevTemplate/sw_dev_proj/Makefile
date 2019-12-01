@@ -5,6 +5,8 @@ OBJ_DIR = ./obj
 BIN_DIR = ./bin
 
 CC      = g++
+RM		= rm
+MKDIR	= C:\Users\Public\DevKit\MSYS2-x64\usr\bin\mkdir.exe
 ENV     = LINUX
 CFLAGS  = -D$(ENV) -m64 -I$(INCDIR)
 LDFLAGS = -lm
@@ -37,20 +39,20 @@ BIN  = $(BIN_DIR)/$(BIN_NAME)
 all debug: $(BIN)
 
 $(BIN): $(OBJS)
-	mkdir -p $(BIN_DIR)
-	mkdir -p ./result
-	mkdir -p ./pat
+	$(MKDIR) -p $(BIN_DIR)
+	$(MKDIR) -p ./result
+	$(MKDIR) -p ./pat
 	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 
 $(OBJ_DIR)/%.o: %$(SUFFIX) $(INCS)
-	mkdir -p $(OBJ_DIR)
+	$(MKDIR) -p $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	-rm -rf $(BIN_DIR)/*
-	-rm -rf $(OBJ_DIR)/*
+	-$(RM) -rf $(BIN_DIR)/*
+	-$(RM) -rf $(OBJ_DIR)/*
 
 clean_pat:
-	-rm -rf ./result/*
-	-rm -rf ./pat/*
+	-$(RM) -rf ./result/*
+	-$(RM) -rf ./pat/*
 
