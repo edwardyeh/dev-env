@@ -6,9 +6,9 @@ BIN_DIR = ./bin
 
 CC      = g++
 RM		= rm
-MKDIR	= C:\Users\Public\DevKit\MSYS2-x64\usr\bin\mkdir.exe
+MKDIR	= /c/Users/Public/DevKit/MSYS2-x64/usr/bin/mkdir.exe
 ENV     = LINUX
-CFLAGS  = -D$(ENV) -m64 -I$(INCDIR)
+CFLAGS  = -D$(ENV) -m64 -I$(INC_DIR)
 LDFLAGS = -lm
 ####### Project Define #########################################################
 BIN_NAME = main
@@ -42,7 +42,7 @@ $(BIN): $(OBJS)
 	$(MKDIR) -p $(BIN_DIR)
 	$(MKDIR) -p ./result
 	$(MKDIR) -p ./pat
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+	$(CC) -o $@ $^ $(LDFLAGS) 
 
 $(OBJ_DIR)/%.o: %$(SUFFIX) $(INCS)
 	$(MKDIR) -p $(OBJ_DIR)
