@@ -8,6 +8,8 @@
   <draw:color draw:name="Light Green 1" draw:color="#92D050"/>
   <draw:color draw:name="Light Orange 1" draw:color="#FBE5D6"/>
   <draw:color draw:name="Light Yellow 1" draw:color="#FFFFCC"/>
+  <draw:color draw:name="Light Purple 1" draw:color="#E6CCFF"/>
+  <draw:color draw:name="Purple 1" draw:color="#CC99FF"/>
 
   <!-- Base hues -->
   <!-- 0 brightness -->
