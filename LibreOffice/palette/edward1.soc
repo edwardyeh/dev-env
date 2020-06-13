@@ -5,37 +5,59 @@
   <!-- Color naming RYB Hues: primary: Red, Yellow, Blue; secondary: Orange, Green, Purple; tertiary: Magenta, Indigo, Teal, Lime, Gold, Brick as found https://en.wikipedia.org/wiki/Tertiary_color -->
 
   <!-- Gray palette from black to white -->
-  <draw:color draw:name="Light Green 1" draw:color="#92D050"/>
-  <draw:color draw:name="Light Orange 1" draw:color="#FBE5D6"/>
+  <draw:color draw:name="Black" draw:color="#000000"/>
+  <draw:color draw:name="Dark Gray 4" draw:color="#111111"/>
+  <draw:color draw:name="Dark Gray 3" draw:color="#1c1c1c"/>
+  <draw:color draw:name="Dark Gray 2" draw:color="#333333"/>
+  <draw:color draw:name="Dark Gray 1" draw:color="#666666"/>
+  <draw:color draw:name="Gray" draw:color="#808080"/>
+  <draw:color draw:name="Light Gray 1" draw:color="#999999"/>
+  <draw:color draw:name="Light Gray 2" draw:color="#b2b2b2"/>
+  <draw:color draw:name="Light Gray 3" draw:color="#cccccc"/>
+  <draw:color draw:name="Light Gray 4" draw:color="#dddddd"/>
+  <draw:color draw:name="Light Gray 5" draw:color="#eeeeee"/>
+  <draw:color draw:name="White" draw:color="#ffffff"/>
+
+  <!-- General Color setting -->
+  <draw:color draw:name="Light Green 1" draw:color="#92d050"/>
+  <draw:color draw:name="Light Orange 1" draw:color="#ffcc99"/>
+  <draw:color draw:name="Light Orange 2" draw:color="#FBE5D6"/>
   <draw:color draw:name="Light Yellow 1" draw:color="#FFFFCC"/>
-  <draw:color draw:name="Light Purple 1" draw:color="#E6CCFF"/>
   <draw:color draw:name="Purple 1" draw:color="#CC99FF"/>
+  <draw:color draw:name="Purple 2" draw:color="#E6CCFF"/>
+  <draw:color draw:name="Purple 3" draw:color="#DEDCE6"/>
+  <draw:color draw:name="GC-none 7" draw:color="#ffffff"/>
+  <draw:color draw:name="GC-none 8" draw:color="#ffffff"/>
+  <draw:color draw:name="GC-none 9" draw:color="#ffffff"/>
+  <draw:color draw:name="GC-none 10" draw:color="#ffffff"/>
+  <draw:color draw:name="GC-none 11" draw:color="#ffffff"/>
 
-  <!-- Base hues -->
-  <!-- 0 brightness -->
-  <!--<draw:color draw:name="Yellow" draw:color="#ffff00"/>-->
+  <!-- Visio/Draw color setting 1 -->
+  <draw:color draw:name="General block" draw:color="#e8eef7"/>
+  <draw:color draw:name="Purple block" draw:color="#ececff"/>
+  <draw:color draw:name="Blue block 1" draw:color="#99ccff"/>
+  <draw:color draw:name="Blue block 2" draw:color="#dbeef3"/>
+  <draw:color draw:name="Line buffer 1" draw:color="#00ccff"/>
+  <draw:color draw:name="Line buffer 2" draw:color="#3366ff"/>
+  <draw:color draw:name="Link line" draw:color="#4677bf"/>
+  <draw:color draw:name="Purple frame" draw:color="#cc99ff"/>
+  <draw:color draw:name="Green frame" draw:color="#008000"/>
+  <draw:color draw:name="Green pixel" draw:color="#ccffcc"/>
+  <draw:color draw:name="Orange pixel" draw:color="#ffcc00"/>
+  <draw:color draw:name="Draw1-none-11" draw:color="#ffffff"/>
 
-  <!-- +191 brightness, 75% tint -->
-  <!--<draw:color draw:name="Light Yellow 4" draw:color="#ffffd7"/>-->
+  <!-- Visio/Draw color setting 2 -->
+  <draw:color draw:name="Title" draw:color="#993366"/>
+  <draw:color draw:name="Sub title" draw:color="#000099"/>
+  <draw:color draw:name="Draw2-none-2" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-3" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-4" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-5" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-6" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-7" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-8" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-9" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-10" draw:color="#ffffff"/>
+  <draw:color draw:name="Draw2-none-11" draw:color="#ffffff"/>
 
-  <!-- +153 brightness, 60% tint -->
-  <!--<draw:color draw:name="Light Yellow 3" draw:color="#ffffa6"/>-->
-
-  <!-- +115 brightness, 45% tint -->
-  <!--<draw:color draw:name="Light Yellow 2" draw:color="#ffff6d"/>-->
-
-  <!-- +77 brightness, 30% tint -->
-  <!--<draw:color draw:name="Light Yellow 1" draw:color="#ffff38"/>-->
-
-  <!-- -51 brightness, 20% shade -->
-  <!--<draw:color draw:name="Dark Yellow 1" draw:color="#e6e905"/>-->
-
-  <!-- -102 brightness, 40% shade -->
-  <!--<draw:color draw:name="Dark Yellow 2" draw:color="#acb20c"/>-->
-
-  <!-- -153 brightness, 60% shade  -->
-  <!--<draw:color draw:name="Dark Yellow 3" draw:color="#706e0c"/>-->
-
-  <!-- -204 brightness, 80% shade -->
-  <!--<draw:color draw:name="Dark Yellow 4" draw:color="#443205"/>-->
 </office:color-table>
