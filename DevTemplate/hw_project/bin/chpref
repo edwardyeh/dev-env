@@ -1,0 +1,58 @@
+#!/bin/bash
+## +FHDR=======================================================================
+## Copyright (c) 2020 Hsin-Hsien Yeh (Edward Yeh).
+## All rights reserved.
+## ----------------------------------------------------------------------------
+## Filename         : chpref
+## File Description : 
+## ----------------------------------------------------------------------------
+## Author           : Edward Yeh
+## Created On       : Thu 30 Jul 2020 02:23:15 AM CST
+## Format           : Shell script
+## ----------------------------------------------------------------------------
+## Reuse Issues     : 
+## Release History  : 
+## -FHDR=======================================================================
+
+function usage() {
+    prog=$(basename $0)
+    echo -e "usage: $prog <old_prefix> <new_prefix> <lv_down> <files>\n"
+    echo -e "Prefix change script.\n"
+    echo -e "Options:"
+    echo -e "  old_prefix   Old prefix which want to be replaced."
+    echo -e "  new_prefix   New prefix which want to replace."
+    echo -e "  lv_down      Set 1 to support level down, else set 0."
+    echo -e "               (ex. LDC -> VPE330_ldc)"
+    echo -e "  files        Files which want to change prefix."
+    echo -e ""
+}
+
+if [ "$#" -lt 4 ]; then
+    usage $0
+    exit 1
+fi
+
+old_pf=$1
+new_pf=$2
+lv_down=$3
+
+old_pf_lo=$(echo $old_pf | tr [:upper:] [:lower:])
+
+files=""
+for ((i = 4; i <= $#; i++)); do
+    files="$files $(eval echo \$$i)"
+done
+
+sed -i 's/`'${old_pf}'_dff/`'${new_pf}'_dff/g' $files
+
+if [ "$lv_down" -eq 0 ]; then
+    sed -i 's/'${old_pf}'_/'${new_pf}'_/g' $files
+else
+    sed -i 's/'${old_pf}'_/'${new_pf}'_'${old_pf_lo}'_/g'                   $files
+    sed -i 's/\(`define .*'${new_pf}'_\)'${old_pf_lo}'_/\1'${old_pf}'_/g'   $files
+    sed -i 's/\(`'${new_pf}'_\)'${old_pf_lo}'_/\1'${old_pf}'_/g'            $files
+    sed -i 's/\(`ifdef .*'${new_pf}'_\)'${old_pf_lo}'_/\1'${old_pf}'_/g'    $files
+    sed -i 's/\(`ifndef .*'${new_pf}'_\)'${old_pf_lo}'_/\2'${old_pf}'_/g'   $files
+    sed -i 's/\(`endif .*'${new_pf}'_\)'${old_pf_lo}'_/\2'${old_pf}'_/g'    $files
+fi
+
